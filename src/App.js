@@ -4,7 +4,16 @@ import Card from "./components/Card/Card";
 import { list } from "./assets/list";
 
 function App() {
-  const [cardList, setCardList] = useState()
+  const [cardList, setCardList] = useState(list)
+  const [currentCard, setCurrentCard] = useState(null);
+
+  const sortCards = (a, b) => {
+    if (a.order > b.order) {
+      return 1
+    } else {
+      return -1
+    }
+  }
   return (
     <div className="App">
       <header className={styles.header}>
@@ -15,8 +24,12 @@ function App() {
           Select pictures in correct order
         </h2>
         <div className={styles.content}>
-          {list.map((item) => (
-            <Card item={item} key={item.id} />
+          {cardList.sort(sortCards).map((item) => (
+            <Card item={item} key={item.id}
+              currentCard={currentCard}
+              setCurrentCard={setCurrentCard}
+              cardList={cardList}
+              setCardList={setCardList} />
           ))}
         </div>
       </section>
