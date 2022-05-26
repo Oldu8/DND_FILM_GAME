@@ -1,24 +1,26 @@
 import React from "react";
 import styles from "./Card.module.scss"
 
-const Card = ({ item }, currentCard, setCurrentCard, cardList, setCardList) => {
+const Card = (props) => {
+
+    const { item, currentCard, setCurrentCard, cardList, setCardList } = props;
+
     function dragStartHandler(e, item) {
-        console.log(item)
+        setCurrentCard(item);
     }
+
     function dragEndHandler(e) {
-        setCurrentCard = { item }
         e.target.style.background = 'rgb(204, 241, 241)'
-
-
     }
+
     function dragOverHandler(e) {
         e.preventDefault();
         e.target.style.background = 'lightgray'
-
     }
+
     function dropHandler(e, item) {
         e.preventDefault();
-        console.log({ cardList })
+
         setCardList(cardList.map((c) => {
             if (c.id === item.id) {
                 return { ...c, order: currentCard.order }
@@ -26,10 +28,10 @@ const Card = ({ item }, currentCard, setCurrentCard, cardList, setCardList) => {
             if (c.id === currentCard.id) {
                 return { ...c, order: item.order }
             }
-            console.log(cardList)
             return c;
         }))
-        console.log(item)
+        e.target.style.background = 'rgb(204, 241, 241)'
+
     }
 
     return (
@@ -42,7 +44,7 @@ const Card = ({ item }, currentCard, setCurrentCard, cardList, setCardList) => {
         >
             <h3 className={styles.title}>{item.title}</h3>
             <p className={styles.order}> {item.order} - order</p>
-            <p className={styles.id}>{item.id} - id</p>
+            <img className={styles.img} src={item.img} alt={item.title} />
         </div>
     )
 }
