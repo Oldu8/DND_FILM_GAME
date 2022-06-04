@@ -31,5 +31,24 @@ export const list = [
             { id: 2, title: 'Iron Man 2', order: 2, img: 'https://m.media-amazon.com/images/M/MV5BMTM0MDgwNjMyMl5BMl5BanBnXkFtZTcwNTg3NzAzMw@@._V1_FMjpg_UX1000_.jpg' },
             { id: 3, title: 'Iron Man Three', order: 3, img: 'https://m.media-amazon.com/images/M/MV5BMjE5MzcyNjk1M15BMl5BanBnXkFtZTcwMjQ4MjcxOQ@@._V1_FMjpg_UX1000_.jpg' }]
     },
+    {
+        film: 'Lord of the Rings', filmId: 4, filmdata: [
+            { id: 1, title: 'The Lord of the Rings: The Fellowship of the Ring', order: 1, img: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg' },
+            { id: 2, title: 'The Lord of the Rings: The Two Towers', order: 2, img: 'https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg' },
+            { id: 3, title: 'The Lord of the Rings: The Return of the King', order: 3, img: 'https://i.pinimg.com/originals/b7/0d/3e/b70d3e343db1953ceadda129e846b7f4.jpg' }]
+    },
+    {
+        film: 'Star Wars', filmId: 5, filmdata: [
+            { id: 1, title: 'Star Wars: Episode IV – A New Hope', order: 1, img: 'https://flxt.tmsimg.com/assets/p4407_p_v12_ab.jpg' },
+            { id: 2, title: 'Star Wars: Episode V - The Empire Strikes Back', order: 2, img: 'https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg' },
+            { id: 3, title: 'Star Wars: Episode VI - Return of the Jedi', order: 3, img: 'https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg' },
+            { id: 4, title: 'Star Wars: Episode I - The Phantom Menace', order: 4, img: 'https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg' },
+            { id: 5, title: 'Star Wars: Episode II - Attack of the Clones', order: 5, img: 'https://m.media-amazon.com/images/M/MV5BMDAzM2M0Y2UtZjRmZi00MzVlLTg4MjEtOTE3NzU5ZDVlMTU5XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_.jpg' },
+            { id: 6, title: 'Star Wars: Episode III - Revenge of the Sith', order: 6, img: 'https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_.jpg' },
+            { id: 7, title: 'Star Wars: Episode VII - The Force Awakens', order: 7, img: 'https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_.jpg' },
+            { id: 8, title: 'Star Wars: Episode VIII - The Last Jedi', order: 8, img: 'https://images-na.ssl-images-amazon.com/images/S/pv-target-images/597f420d9e23a988ae10bd5c9360858d61a932545c409cd4f3e7a553a06248ef._RI_V_TTW_.jpg' },
+            { id: 9, title: 'Star Wars: Episode IX - The Rise of Skywalker', order: 9, img: 'https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg' },
+        ]
+    },
 
 ]
