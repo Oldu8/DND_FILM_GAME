@@ -1,6 +1,16 @@
+.app {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(139, 139, 207, 1) 24%,
+    rgba(128, 0, 255, 1) 96%
+  );
+}
+
 .header {
   width: 100%;
-  height: 150px;
+  height: 70px;
   background-color: antiquewhite;
   margin: 0;
   display: flex;
@@ -14,13 +24,15 @@
 }
 
 .main {
-  background-color: rgb(204, 241, 241);
-  padding: 30px 0;
+  background-color: rgb(176, 215, 232);
+  padding: 50px 0;
+  min-height: 100vh;
 }
 
 .mainTitle {
   font-size: 40px;
   text-align: center;
+  font-weight: 500;
 }
 
 .content {
@@ -36,4 +48,10 @@
   margin-top: 25px;
   display: flex;
   justify-content: center;
+}
+
+.btnBlock {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
