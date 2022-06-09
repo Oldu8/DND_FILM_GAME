@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./App.module.scss";
 import Card from "./components/Card/Card";
 import { list } from "./assets/list";
@@ -7,25 +7,38 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   const [filmList, setFilmList] = useState(list)
   const [chosenFilm, setChosenFilm] = useState('');
+  const [rightList, setRightList] = useState('');
   const [cardList, setCardList] = useState(null)
   const [currentCard, setCurrentCard] = useState(null);
 
-  const sortCards = (a, b) => {
-    if (a.order > b.order) {
-      return 1
-    } else {
-      return -1
-    }
-  }
+  const rightOrderCards = (a, b) => a.order - b.order;
 
   function handleChange(e) {
     setChosenFilm(e);
-    getFilm(e)
+    setRightList(filmList.find((item) => item.filmId === +e).filmdata);
+    setCardList(filmList.find((item) => item.filmId === +e).filmdata.map((item) => {
+      return { ...item, order: Math.floor((Math.random() - 0.5) * 100) }
+    }))
   }
 
-  function getFilm(id) {
-    setCardList(filmList.find((item) => item.filmId === +id).filmdata)
+  function checkOrder() {
+    console.log('check')
+    console.log(rightList);
+    const isCorrect = rightList.map((item, index) => {
+      if (item.id !== cardList[index].id) {
+        return console.log(item.id, cardList[index].id, 'wrong')
+      }
+      console.log(item.id, cardList[index].id, 'right')
+    })
   }
+
+  function shuffle() {
+    setCardList(cardList.map((item) => {
+      return { ...item, order: Math.floor(Math.random() - 0.5) * 100 }
+    }))
+  }
+
+  useEffect(() => { console.log(cardList) }, [cardList])
 
   return (
     <div className={styles.app}>
@@ -40,10 +53,13 @@ function App() {
                 <Dropdown.Item key={film.film} eventKey={film.filmId} title={film.film}>{film.film}</Dropdown.Item>
               ))}
             </DropdownButton>
+            <Button variant="secondary" onClick={shuffle}>
+              Reshuffle
+            </Button>
           </div>
           <div className={styles.content}>
             {cardList ?
-              cardList.sort(sortCards).map((item) => (
+              cardList.sort(rightOrderCards).map((item) => (
                 <Card item={item} key={item.id}
                   currentCard={currentCard}
                   setCurrentCard={setCurrentCard}
@@ -53,7 +69,7 @@ function App() {
               : null}
           </div>
           <div className={styles.btnBlock}>
-            <Button variant="success" size="lg">
+            <Button variant="success" size="lg" onClick={checkOrder}>
               Check guess !
             </Button>
           </div>
