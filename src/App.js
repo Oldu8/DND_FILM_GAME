@@ -9,9 +9,16 @@ function App() {
   const [chosenFilm, setChosenFilm] = useState('');
   const [rightList, setRightList] = useState('');
   const [cardList, setCardList] = useState(null)
+  const [result, setResult] = useState(null);
   const [currentCard, setCurrentCard] = useState(null);
 
   const rightOrderCards = (a, b) => a.order - b.order;
+
+  const objMessage = {
+    success: 'You are right!',
+    danger: 'You are wrong',
+  }
+
 
   function handleChange(e) {
     setChosenFilm(e);
@@ -22,23 +29,24 @@ function App() {
   }
 
   function checkOrder() {
-    console.log('check')
-    console.log(rightList);
-    const isCorrect = rightList.map((item, index) => {
-      if (item.id !== cardList[index].id) {
-        return console.log(item.id, cardList[index].id, 'wrong')
-      }
-      console.log(item.id, cardList[index].id, 'right')
-    })
+    for (let i = 0; i < rightList.length; i++) {
+      if (rightList[i].id !== cardList[i].id) {
+        setResult('danger');
+        break;
+      };
+      setResult('success');
+    }
   }
 
   function shuffle() {
     setCardList(cardList.map((item) => {
-      return { ...item, order: Math.floor(Math.random() - 0.5) * 100 }
+      return { ...item, order: Math.floor(Math.random() - 0.5) * 10 }
     }))
   }
 
-  useEffect(() => { console.log(cardList) }, [cardList])
+  useEffect(() => {
+    setResult(null)
+  }, [chosenFilm])
 
   return (
     <div className={styles.app}>
@@ -53,9 +61,12 @@ function App() {
                 <Dropdown.Item key={film.film} eventKey={film.filmId} title={film.film}>{film.film}</Dropdown.Item>
               ))}
             </DropdownButton>
-            <Button variant="secondary" onClick={shuffle}>
+            <Button className={styles.reshuffle} variant="secondary" onClick={shuffle}>
               Reshuffle
             </Button>
+          </div>
+          <div className={styles.resBlock}>
+            {!!result && <Alert variant={result} className={styles.message}>{objMessage[result]}</Alert>}
           </div>
           <div className={styles.content}>
             {cardList ?
@@ -68,11 +79,12 @@ function App() {
               ))
               : null}
           </div>
-          <div className={styles.btnBlock}>
-            <Button variant="success" size="lg" onClick={checkOrder}>
-              Check guess !
-            </Button>
-          </div>
+          {cardList ?
+            <div className={styles.btnBlock}>
+              <Button variant="success" size="lg" onClick={checkOrder}>
+                Check guess !
+              </Button>
+            </div> : null}
         </section>
       </section>
     </div>

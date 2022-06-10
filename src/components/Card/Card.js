@@ -31,7 +31,6 @@ const Card = (props) => {
             return c;
         }))
         e.target.style.background = 'rgb(204, 241, 241)'
-
     }
 
     return (
