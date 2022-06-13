@@ -42,8 +42,8 @@ const Card = (props) => {
             onDrop={e => dropHandler(e, item)}
         >
             <h3 className={styles.title}>{item.title}</h3>
-            <p className={styles.order}> {item.order} - current order</p>
-            <p className={styles.order}> {item.id} - real order</p>
+            {/* <p className={styles.order}> {item.order} - current order</p>
+            <p className={styles.order}> {item.id} - real order</p> */}
             <img className={styles.img} src={item.img} alt={item.title} />
         </div>
     )

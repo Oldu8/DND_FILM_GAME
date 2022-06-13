@@ -50,5 +50,26 @@ export const list = [
             { id: 9, title: 'Star Wars: Episode IX - The Rise of Skywalker', order: 9, img: 'https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg' },
         ]
     },
+    {
+        film: 'Indiana Jones', filmId: 6, filmdata: [
+            { id: 1, title: 'Raiders of the Lost Ark', order: 1, img: 'https://m.media-amazon.com/images/M/MV5BNTU2ODkyY2MtMjU1NC00NjE1LWEzYjgtMWQ3MzRhMTE0NDc0XkEyXkFqcGdeQXVyMjM4MzQ4OTQ@._V1_.jpg' },
+            {
+                id: 2, title: 'Indiana Jones and the Temple of Doom', order: 2, img: 'https://m.media-amazon.com/images/M/MV5BMGI1NTk2ZWMtMmI0YS00Yzg0LTljMzgtZTg4YjkyY2E5Zjc0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY1200_CR88,0,630,1200_AL_.jpg'
+            },
+            {
+                id: 3, title: 'Indiana Jones and the Last Crusade', order: 3, img: 'https://m.media-amazon.com/images/M/MV5BY2Q0ODg4ZmItNDZiYi00ZWY5LTg2NzctNmYwZjA5OThmNzE1XkEyXkFqcGdeQXVyMjM4MzQ4OTQ@._V1_.jpg'
+            },
+            { id: 4, title: 'Indiana Jones and the Kingdom of the Crystal Skull', order: 4, img: 'https://m.media-amazon.com/images/M/MV5BZmY5ZTk3ZDMtZjA1MS00NzU4LTk5ZDItYmNhOTkxMGYxMjRlXkEyXkFqcGdeQXVyMjM4MzQ4OTQ@._V1_.jpg' },
+        ]
+    },
+    {
+        film: 'Bourne', filmId: 7, filmdata: [
+            { id: 1, title: 'The Bourne Identity', order: 1, img: 'https://m.media-amazon.com/images/M/MV5BM2JkNGU0ZGMtZjVjNS00NjgyLWEyOWYtZmRmZGQyN2IxZjA2XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_FMjpg_UX1000_.jpg' },
+            { id: 2, title: 'The Bourne Supremacy', order: 2, img: 'https://m.media-amazon.com/images/M/MV5BYTIyMDFmMmItMWQzYy00MjBiLTg2M2UtM2JiNDRhOWE4NjBhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg' },
+            { id: 3, title: 'The Bourne Ultimatum', order: 3, img: 'https://m.media-amazon.com/images/M/MV5BNGNiNmU2YTMtZmU4OS00MjM0LTlmYWUtMjVlYjAzYjE2N2RjXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_FMjpg_UX1000_.jpg' },
+            { id: 4, title: 'The Bourne Legacy', order: 4, img: 'https://m.media-amazon.com/images/M/MV5BMTc4Njk3MDM1Nl5BMl5BanBnXkFtZTcwODgyOTMxOA@@._V1_.jpg' },
+            { id: 5, title: 'Jason Bourne', order: 5, img: 'https://m.media-amazon.com/images/M/MV5BOGNmNzE5YzctODgyYy00MWRlLTljZmQtZWNlYTQ2MjgxODI2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg' }]
+    },
+
 
 ]
