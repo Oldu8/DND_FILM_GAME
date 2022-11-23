@@ -1,0 +1,26 @@
+.header {
+  margin-bottom: 1rem;
+  background-color: #e2d1f9cf;
+  color: #317773;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  & a {
+    color: #317773;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+.link {
+}
