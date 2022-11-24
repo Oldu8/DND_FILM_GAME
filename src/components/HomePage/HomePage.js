@@ -17,7 +17,7 @@ export default function HomePage() {
                     </p>
                 </li> */}
                 <li className="card" style={{ width: '23rem' }}>
-                    <img className="card-img-top" src={filmQuiz} alt="Card image cap" />
+                    <img className="card-img-top" src={filmQuiz} alt="Card banner cap" />
                     <div className="card-body">
                         <h5 className="card-title">Film quiz</h5>
                         <p className="card-text">This is a simple game in which you can choose any saga from list. You will see posters of different films in random order. You goal is to drag it to the correct order and make guess. Good luck!</p>
@@ -25,7 +25,7 @@ export default function HomePage() {
                     </div>
                 </li>
                 <li className="card" style={{ width: '23rem' }}>
-                    <img className="card-img-top" src={filmQuiz} alt="Card image cap" />
+                    <img className="card-img-top" src={filmQuiz} alt="Card banner cap" />
                     <div className="card-body">
                         <h5 className="card-title">Color quiz</h5>
                         <p className="card-text">This game looks like super simple but it's real hard to do. You will see random color and few variants of HEX of this color. Do as much guesses as you can!

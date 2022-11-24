@@ -1,4 +1,3 @@
-import styles from "./App.module.scss";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import FilmPage from "./components/FilmPage/FilmPage";
 import ColorPage from "./components/ColorPage/ColorPage.tsx";

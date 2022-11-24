@@ -46,6 +46,9 @@ function FilmPage() {
     }
 
     useEffect(() => {
+        setFilmList(list)
+    }, [])
+    useEffect(() => {
         setResult(null)
     }, [chosenFilm])
 

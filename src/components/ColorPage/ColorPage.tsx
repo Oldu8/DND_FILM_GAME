@@ -51,6 +51,7 @@ export default function ColorPage() {
 
   useEffect(() => {
     generateColor();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function checkBest() {
