@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './HomePage.module.scss'
 import filmQuiz from '../../assets/banners/filmQuiz.png'
+import colorQuiz from '../../assets/banners/colorQuiz.png'
+
 import { Link } from 'react-router-dom'
 
 export default function HomePage() {
@@ -25,7 +27,7 @@ export default function HomePage() {
                     </div>
                 </li>
                 <li className="card" style={{ width: '23rem' }}>
-                    <img className="card-img-top" src={filmQuiz} alt="Card banner cap" />
+                    <img className="card-img-top" src={colorQuiz} alt="Card banner cap" />
                     <div className="card-body">
                         <h5 className="card-title">Color quiz</h5>
                         <p className="card-text">This game looks like super simple but it's real hard to do. You will see random color and few variants of HEX of this color. Do as much guesses as you can!
