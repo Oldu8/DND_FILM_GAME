@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ColorPage.module.scss";
-import { Button, Alert } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 export default function ColorPage() {
   const [color, setColor] = useState<string>("");
@@ -84,7 +84,6 @@ export default function ColorPage() {
           className={styles.guessMe}
           style={{ backgroundColor: color }}
         ></div>
-        {/* <div> */}
         <div className={styles.buttons}>
           {answers.map((answer) => {
             return (
@@ -104,7 +103,6 @@ export default function ColorPage() {
         {result === Result.Correct && (
           <p className={styles.correct}>Correct!</p>
         )}
-        {/* </div> */}
       </section>
     </div>
   );
