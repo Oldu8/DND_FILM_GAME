@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Header() {
     return (
         <div className={styles.header}>
-            <h1 className={styles.title}>Welcome to quizz game!</h1>
+            <h2 className={styles.title}>Welcome to quizz game!</h2>
             <h2 className={styles.title}>Select game you want to play, we have:</h2>
             <nav className={styles.nav}>
                 <Link to='/'><span className={styles.homeLink}>Home</span></Link>

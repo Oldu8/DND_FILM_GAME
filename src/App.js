@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import FilmPage from "./components/FilmPage/FilmPage";
 import ColorPage from "./components/ColorPage/ColorPage.tsx";
-import HomePage from "./components/HomePage/HomePage";
-import Header from "./components/Header/Header";
+import HomePage from "./components/HomePage/HomePage.tsx";
+import Header from "./components/Header/Header.tsx";
 
 function App() {
   return (

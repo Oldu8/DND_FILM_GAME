@@ -74,7 +74,7 @@ export default function ColorPage() {
 
   return (
     <div className={styles.app}>
-      <Alert className={styles.title}>Guess HEX of the shown color</Alert>
+      <div className={styles.mainTitle}>Guess HEX of the shown color</div>
       <section className={styles.content}>
         <div className={styles.score}>
           <span className={styles.counter}>Best score:{bestScore} </span>
@@ -84,27 +84,27 @@ export default function ColorPage() {
           className={styles.guessMe}
           style={{ backgroundColor: color }}
         ></div>
-        <div>
-          <div className={styles.buttons}>
-            {answers.map((answer) => {
-              return (
-                <Button
-                  variant="info"
-                  key={answer}
-                  onClick={() => handelClick(answer)}
-                >
-                  {answer}
-                </Button>
-              );
-            })}
-          </div>
-          {result === Result.Wrong && (
-            <p className={styles.wrong}>Wrong answer!</p>
-          )}
-          {result === Result.Correct && (
-            <p className={styles.correct}>Correct!</p>
-          )}
+        {/* <div> */}
+        <div className={styles.buttons}>
+          {answers.map((answer) => {
+            return (
+              <Button
+                variant="info"
+                key={answer}
+                onClick={() => handelClick(answer)}
+              >
+                {answer}
+              </Button>
+            );
+          })}
         </div>
+        {result === Result.Wrong && (
+          <p className={styles.wrong}>Wrong answer!</p>
+        )}
+        {result === Result.Correct && (
+          <p className={styles.correct}>Correct!</p>
+        )}
+        {/* </div> */}
       </section>
     </div>
   );

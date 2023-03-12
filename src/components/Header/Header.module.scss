@@ -1,5 +1,5 @@
 .header {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   background-color: #e2d1f9cf;
   color: #317773;
   border-radius: 0.5rem;
@@ -16,14 +16,30 @@
   width: 100%;
   & a {
     color: #317773;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     padding: 0.25rem 1rem;
     border-radius: 0.3rem;
     vertical-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+    @media screen and (max-width: 425px) {
+      font-size: 1rem;
+    }
     &:hover {
       color: #e2d1f9cf;
       background-color: #317773;
     }
+  }
+}
+
+.title {
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 1rem;
   }
 }

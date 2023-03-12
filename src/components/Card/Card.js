@@ -1,7 +1,8 @@
 import React from "react";
-import styles from "./Card.module.scss"
+import Card from 'react-bootstrap/Card';
+import styles from './Card.module.scss'
 
-const Card = (props) => {
+const CardItem = (props) => {
 
     const { item, currentCard, setCurrentCard, cardList, setCardList } = props;
 
@@ -34,17 +35,18 @@ const Card = (props) => {
     }
 
     return (
-        <div className={styles.container} draggable={true}
+        <Card className={styles.card} draggable={true}
             onDragStart={(e) => dragStartHandler(e, item)}
             onDragLeave={e => dragEndHandler(e)}
             onDragEnd={e => dragEndHandler(e)}
             onDragOver={e => dragOverHandler(e)}
-            onDrop={e => dropHandler(e, item)}
-        >
-            <h3 className={styles.title}>{item.title}</h3>
-            <img className={styles.img} src={item.img} alt={item.title} />
-        </div>
+            onDrop={e => dropHandler(e, item)}>
+            <Card.Img className={styles.img} variant="top" src={item.img} alt={item.title} />
+            <Card.Body>
+                <Card.Title style={{ textAlign: 'center' }} >{item.title}</Card.Title>
+            </Card.Body>
+        </Card>
     )
 }
 
-export default Card
+export default CardItem

@@ -17,9 +17,9 @@
 
 .wrapper {
   background-color: #e2d1f9cf;
-  border-radius: 5px;
-  min-height: 90vh;
+  border-radius: 2px;
+  min-height: 75vh;
   margin: 0 auto;
+  padding: 1rem 0;
   display: block;
-  min-width: 100%;
 }

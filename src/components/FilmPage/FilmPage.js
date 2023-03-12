@@ -53,45 +53,41 @@ function FilmPage() {
     }, [chosenFilm])
 
     return (
-        <div className={styles.app}>
-            <section className="container">
-                <section className={styles.main}>
-                    <Alert className={styles.mainTitle}>
-                        Set pictures in correct order
-                    </Alert>
-                    <div className={styles.choseBlock}>
-                        <DropdownButton id="dropdown-basic-button" title="Select film to play " size="lg" onSelect={(e) => handleChange(e)}>
-                            {filmList.map((film) => (
-                                <Dropdown.Item key={film.film} eventKey={film.filmId} title={film.film}>{film.film}</Dropdown.Item>
-                            ))}
-                        </DropdownButton>
-                        <Button className={styles.reshuffle} variant="secondary" onClick={shuffle}>
-                            Reshuffle
-                        </Button>
-                    </div>
-                    <div className={styles.resBlock}>
-                        {!!result && <Alert variant={result} className={styles.message}>{objMessage[result]}</Alert>}
-                    </div>
-                    <div className={styles.content}>
-                        {cardList ?
-                            cardList.sort(rightOrderCards).map((item) => (
-                                <Card item={item} key={item.id}
-                                    currentCard={currentCard}
-                                    setCurrentCard={setCurrentCard}
-                                    cardList={cardList}
-                                    setCardList={setCardList} />
-                            ))
-                            : null}
-                    </div>
-                    {cardList ?
-                        <div className={styles.btnBlock}>
-                            <Button variant="success" size="lg" onClick={checkOrder}>
-                                Check guess !
-                            </Button>
-                        </div> : null}
-                </section>
-            </section>
-        </div>
+        <section className={styles.main}>
+            <div className={styles.mainTitle}>
+                Set pictures in correct order
+            </div>
+            <div className={styles.choseBlock}>
+                <DropdownButton id="dropdown-basic-button" title="Select film to play " size="lg" onSelect={(e) => handleChange(e)}>
+                    {filmList.map((film) => (
+                        <Dropdown.Item key={film.film} eventKey={film.filmId} title={film.film}>{film.film}</Dropdown.Item>
+                    ))}
+                </DropdownButton>
+                <Button className={styles.reshuffle} variant="secondary" onClick={shuffle}>
+                    Reshuffle
+                </Button>
+            </div>
+            <div className={styles.resBlock}>
+                {!!result && <Alert variant={result} className={styles.message}>{objMessage[result]}</Alert>}
+            </div>
+            <div className={styles.content}>
+                {cardList ?
+                    cardList.sort(rightOrderCards).map((item) => (
+                        <Card item={item} key={item.id}
+                            currentCard={currentCard}
+                            setCurrentCard={setCurrentCard}
+                            cardList={cardList}
+                            setCardList={setCardList} />
+                    ))
+                    : null}
+            </div>
+            {cardList ?
+                <div className={styles.btnBlock}>
+                    <Button variant="success" size="lg" onClick={checkOrder}>
+                        Check guess !
+                    </Button>
+                </div> : null}
+        </section>
     );
 }
 
